@@ -1,0 +1,17 @@
+{
+    "host": "zzing.co.kr",
+    "username": "pi",
+    "password": "tjdals86",
+    "remotePath": "/var/www/html/yc5",
+    "protocol": "ftp",
+    "port": 0,
+    "fileNameEncoding": "utf8",
+    "autoUpload": true,
+    "autoDelete": false,
+    "autoDownload": false,
+    "ignore": [
+        ".git",
+        "/.vscode",
+        "/data/session"
+    ]
+}
