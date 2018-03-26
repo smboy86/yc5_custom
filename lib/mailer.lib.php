@@ -18,7 +18,7 @@ function mailer($fname, $fmail, $to, $subject, $content, $type=0, $file="", $cc=
 
     $mail = new PHPMailer(); // defaults to using php "mail()"
     if (defined('G5_SMTP') && G5_SMTP) {
-        // 180325 smPark 메일 발송 가능 수정
+        // 180325 smPark 메일 발송 가능 수정 
         /*
         $mail->IsSMTP(); // telling the class to use SMTP
         $mail->Host = G5_SMTP; // SMTP server

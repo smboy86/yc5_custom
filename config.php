@@ -157,7 +157,7 @@ define('G5_MOBILE_AGENT',   'phone|samsung|lgtel|mobile|[^A]skt|nokia|blackberry
 
 // SMTP
 // lib/mailer.lib.php 에서 사용
-define('G5_SMTP',      'smtp.naver.com'); // 180325 smPark 수정
+define('G5_SMTP',      'smtp.naver.com'); // 180325 smPark 수정  
 define('G5_SMTP_PORT', '587');
 
 
