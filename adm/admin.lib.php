@@ -456,7 +456,6 @@ unset($menu);
 unset($amenu);
 // 180328 smPark admin 메뉴 경로 수정
 $tmp = dir(G5_ADMIN_MENU_PATH);
-var_dump($tmp);
 
 $menu_files = array();
 while ($entry = $tmp->read()) {    
