@@ -454,14 +454,17 @@ if (get_session('ss_mb_key') !== $admin_key) {
 unset($auth_menu);
 unset($menu);
 unset($amenu);
-$tmp = dir(G5_ADMIN_PATH);
+// 180328 smPark admin 메뉴 경로 수정
+$tmp = dir(G5_ADMIN_MENU_PATH);
+var_dump($tmp);
+
 $menu_files = array();
-while ($entry = $tmp->read()) {
+while ($entry = $tmp->read()) {    
     if (!preg_match('/^admin.menu([0-9]{3}).*\.php$/', $entry, $m))
         continue;  // 파일명이 menu 으로 시작하지 않으면 무시한다.
 
     $amenu[$m[1]] = $entry;
-    $menu_files[] = G5_ADMIN_PATH.'/'.$entry;
+    $menu_files[] = G5_ADMIN_MENU_PATH.'/'.$entry;
 }
 @asort($menu_files);
 foreach($menu_files as $file){
