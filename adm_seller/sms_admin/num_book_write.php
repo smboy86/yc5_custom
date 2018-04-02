@@ -39,7 +39,7 @@ if (!is_numeric($write['bk_receipt']))
 
 $no_group = sql_fetch("select * from {$g5['sms5_book_group_table']} where bg_no = 1");
 
-include_once(G5_ADMIN_PATH."/admin.head.php");
+include_once(G5_ADMIN_SELLER_PATH."/admin.head.php");
 ?>
 
 <form name="book_form" id="book_form" method="post" action="./num_book_update.php">
@@ -88,7 +88,7 @@ include_once(G5_ADMIN_PATH."/admin.head.php");
                 foreach( $exist_hplist as $v ) {
 
                     if( empty($v) ) continue;
-                    $href = G5_ADMIN_URL."/member_form.php?w=u&amp;mb_id={$v['mb_id']}";
+                    $href = G5_ADMIN_SELLER_URL."/member_form.php?w=u&amp;mb_id={$v['mb_id']}";
                 ?>
                     <li><strong>중복됨 </strong><a href="<?php echo $href; ?>" target="_blank"><?php echo $v['mb_id']; ?></a></li>
                 <?php
@@ -111,7 +111,7 @@ include_once(G5_ADMIN_PATH."/admin.head.php");
     <?php if ($w == 'u') { ?>
     <tr>
         <th scope="row">회원아이디</th>
-        <td> <?php echo $write['mb_id'] ? '<a href="'.G5_ADMIN_URL.'/member_form.php?w=u&amp;mb_id='.$write['mb_id'].'">'.$write['mb_id'].'</a>' : '비회원'?> </td>
+        <td> <?php echo $write['mb_id'] ? '<a href="'.G5_ADMIN_SELLER_URL.'/member_form.php?w=u&amp;mb_id='.$write['mb_id'].'">'.$write['mb_id'].'</a>' : '비회원'?> </td>
     </tr>
     <tr>
         <th scope="row">업데이트</th>
@@ -176,7 +176,7 @@ function book_submit(){
                     list_data = data.exist[num];
 
                     if(list_data) {
-                        var href = "<?php echo G5_ADMIN_URL ?>/member_form.php?w=u&mb_id="+list_data;
+                        var href = "<?php echo G5_ADMIN_SELLER_URL ?>/member_form.php?w=u&mb_id="+list_data;
                         list_text += "<li><a href=\""+href+"\" target=\"_blank\">"+list_data+"</a></li>";
                     }
                 });
@@ -212,5 +212,5 @@ function book_submit(){
 }
 </script>
 <?php
-include_once(G5_ADMIN_PATH.'/admin.tail.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

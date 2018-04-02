@@ -6,7 +6,7 @@ auth_check($auth[$sub_menu], "r");
 
 $g5['title'] = "회원정보 업데이트";
 
-include_once(G5_ADMIN_PATH.'/admin.head.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.head.php');
 ?>
 
 <div id="sms5_mbup">
@@ -64,5 +64,5 @@ include_once(G5_ADMIN_PATH.'/admin.head.php');
 </script>
 
 <?php
-include_once(G5_ADMIN_PATH.'/admin.tail.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

@@ -87,7 +87,7 @@ function get_ajax_token()
 
     $.ajax({
         type: "POST",
-        url: g5_admin_url+"/ajax.token.php",
+        url: G5_ADMIN_SELLER_URL+"/ajax.token.php",
         cache: false,
         async: false,
         dataType: "json",

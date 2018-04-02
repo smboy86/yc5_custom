@@ -5,7 +5,7 @@ include_once('./_common.php');
 auth_check($auth[$sub_menu], "w");
 
 $g5['title'] = "미완료주문 내역";
-include_once(G5_ADMIN_PATH.'/admin.head.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.head.php');
 
 //------------------------------------------------------------------------------
 // 주문서 정보
@@ -569,5 +569,5 @@ function del_confirm()
 </script>
 
 <?php
-include_once(G5_ADMIN_PATH.'/admin.tail.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

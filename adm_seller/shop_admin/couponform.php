@@ -28,7 +28,7 @@ if($cp['cp_method'] == 1) {
     $cp_target_btn = '상품검색';
 }
 
-include_once (G5_ADMIN_PATH.'/admin.head.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.head.php');
 include_once(G5_PLUGIN_PATH.'/jquery-ui/datepicker.php');
 ?>
 
@@ -279,5 +279,5 @@ function form_check(f)
 </script>
 
 <?php
-include_once (G5_ADMIN_PATH.'/admin.tail.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

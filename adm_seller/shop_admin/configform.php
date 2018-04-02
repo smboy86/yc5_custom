@@ -13,7 +13,7 @@ if ($config['cf_sms_use'] && $config['cf_icode_id'] && $config['cf_icode_pw']) {
 }
 
 $g5['title'] = '쇼핑몰설정';
-include_once (G5_ADMIN_PATH.'/admin.head.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.head.php');
 
 $pg_anchor = '<ul class="anchor">
 <li><a href="#anc_scf_info">사업자정보</a></li>
@@ -610,7 +610,7 @@ if(!isset($default['de_listtype_list_skin'])) {
         <tr>
             <th scope="row"><label for="de_taxsave_use">현금영수증<br>발급사용</label></th>
             <td>
-                <?php echo help("관리자는 설정에 관계없이 <a href=\"".G5_ADMIN_URL."/shop_admin/orderlist.php\">주문내역</a> &gt; 보기에서 발급이 가능합니다.\n현금영수증 발급 취소는 PG사에서 지원하는 현금영수증 취소 기능을 사용하시기 바랍니다.", 50); ?>
+                <?php echo help("관리자는 설정에 관계없이 <a href=\"".G5_ADMIN_SELLER_URL."/shop_admin/orderlist.php\">주문내역</a> &gt; 보기에서 발급이 가능합니다.\n현금영수증 발급 취소는 PG사에서 지원하는 현금영수증 취소 기능을 사용하시기 바랍니다.", 50); ?>
                 <select id="de_taxsave_use" name="de_taxsave_use">
                     <option value="0" <?php echo get_selected($default['de_taxsave_use'], 0); ?>>사용안함</option>
                     <option value="1" <?php echo get_selected($default['de_taxsave_use'], 1); ?>>사용</option>
@@ -620,7 +620,7 @@ if(!isset($default['de_listtype_list_skin'])) {
         <tr>
             <th scope="row"><label for="cf_use_point">포인트 사용</label></th>
             <td>
-                <?php echo help("<a href=\"".G5_ADMIN_URL."/config_form.php#frm_board\" target=\"_blank\">환경설정 &gt; 기본환경설정</a>과 동일한 설정입니다."); ?>
+                <?php echo help("<a href=\"".G5_ADMIN_SELLER_URL."/config_form.php#frm_board\" target=\"_blank\">환경설정 &gt; 기본환경설정</a>과 동일한 설정입니다."); ?>
                 <input type="checkbox" name="cf_use_point" value="1" id="cf_use_point"<?php echo $config['cf_use_point']?' checked':''; ?>> 사용
             </td>
         </tr>
@@ -701,14 +701,14 @@ if(!isset($default['de_listtype_list_skin'])) {
                 <a href="http://sir.kr/main/service/lg_pg.php" target="_blank" id="scf_lgreg" class="lg_btn">LG유플러스 서비스신청하기</a>
             </th>
             <td>
-                <?php echo help("LG유플러스에서 받은 si_ 로 시작하는 상점 ID를 입력하세요.\n만약, 상점 ID가 si_로 시작하지 않는다면 LG유플러스에 사이트코드 변경 요청을 하십시오. 예) si_lguplus\n<a href=\"".G5_ADMIN_URL."/config_form.php#anc_cf_cert\">기본환경설정 &gt; 본인확인</a> 설정의 LG유플러스 상점아이디와 동일합니다."); ?>
+                <?php echo help("LG유플러스에서 받은 si_ 로 시작하는 상점 ID를 입력하세요.\n만약, 상점 ID가 si_로 시작하지 않는다면 LG유플러스에 사이트코드 변경 요청을 하십시오. 예) si_lguplus\n<a href=\"".G5_ADMIN_SELLER_URL."/config_form.php#anc_cf_cert\">기본환경설정 &gt; 본인확인</a> 설정의 LG유플러스 상점아이디와 동일합니다."); ?>
                 <span class="sitecode">si_</span> <input type="text" name="cf_lg_mid" value="<?php echo $config['cf_lg_mid']; ?>" id="cf_lg_mid" class="frm_input code_input" size="10" maxlength="20"> 영문자, 숫자 혼용
             </td>
         </tr>
         <tr class="pg_info_fld lg_info_fld">
             <th scope="row"><label for="cf_lg_mert_key">LG유플러스 MERT KEY</label></th>
             <td>
-                <?php echo help("LG유플러스 상점MertKey는 상점관리자 -> 계약정보 -> 상점정보관리에서 확인하실 수 있습니다.\n예) 95160cce09854ef44d2edb2bfb05f9f3\n<a href=\"".G5_ADMIN_URL."/config_form.php#anc_cf_cert\">기본환경설정 &gt; 본인확인</a> 설정의 LG유플러스 MERT KEY와 동일합니다."); ?>
+                <?php echo help("LG유플러스 상점MertKey는 상점관리자 -> 계약정보 -> 상점정보관리에서 확인하실 수 있습니다.\n예) 95160cce09854ef44d2edb2bfb05f9f3\n<a href=\"".G5_ADMIN_SELLER_URL."/config_form.php#anc_cf_cert\">기본환경설정 &gt; 본인확인</a> 설정의 LG유플러스 MERT KEY와 동일합니다."); ?>
                 <input type="text" name="cf_lg_mert_key" value="<?php echo $config['cf_lg_mert_key']; ?>" id="cf_lg_mert_key" class="frm_input " size="36" maxlength="50">
             </td>
         </tr>
@@ -1443,7 +1443,7 @@ function byte_check(el_cont, el_byte)
         <tr>
             <th scope="row"><label for="cf_sms_use">SMS 사용</label></th>
             <td>
-                <?php echo help("SMS  서비스 회사를 선택하십시오. 서비스 회사를 선택하지 않으면, SMS 발송 기능이 동작하지 않습니다.<br>아이코드는 무료 문자메세지 발송 테스트 환경을 지원합니다.<br><a href=\"".G5_ADMIN_URL."/config_form.php#anc_cf_sms\">기본환경설정 &gt; SMS</a> 설정과 동일합니다."); ?>
+                <?php echo help("SMS  서비스 회사를 선택하십시오. 서비스 회사를 선택하지 않으면, SMS 발송 기능이 동작하지 않습니다.<br>아이코드는 무료 문자메세지 발송 테스트 환경을 지원합니다.<br><a href=\"".G5_ADMIN_SELLER_URL."/config_form.php#anc_cf_sms\">기본환경설정 &gt; SMS</a> 설정과 동일합니다."); ?>
                 <select id="cf_sms_use" name="cf_sms_use">
                     <option value="" <?php echo get_selected($config['cf_sms_use'], ''); ?>>사용안함</option>
                     <option value="icode" <?php echo get_selected($config['cf_sms_use'], 'icode'); ?>>아이코드</option>
@@ -1816,5 +1816,5 @@ if($default['de_iche_use'] || $default['de_vbank_use'] || $default['de_hp_use'] 
     }
 }
 
-include_once (G5_ADMIN_PATH.'/admin.tail.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

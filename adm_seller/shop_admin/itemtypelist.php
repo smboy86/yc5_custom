@@ -7,7 +7,7 @@ auth_check($auth[$sub_menu], "r");
 $doc = strip_tags($doc);
 
 $g5['title'] = '상품유형관리';
-include_once (G5_ADMIN_PATH.'/admin.head.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.head.php');
 
 /*
 $sql_search = " where 1 ";
@@ -190,5 +190,5 @@ $listall = '<a href="'.$_SERVER['SCRIPT_NAME'].'" class="ov_listall">전체목�
 <?php echo get_paging(G5_IS_MOBILE ? $config['cf_mobile_pages'] : $config['cf_write_pages'], $page, $total_page, "{$_SERVER['SCRIPT_NAME']}?$qstr&amp;page="); ?>
 
 <?php
-include_once (G5_ADMIN_PATH.'/admin.tail.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

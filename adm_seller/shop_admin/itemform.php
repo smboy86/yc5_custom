@@ -65,7 +65,7 @@ else
 $qstr  = $qstr.'&amp;sca='.$sca.'&amp;page='.$page;
 
 $g5['title'] = $html_title;
-include_once (G5_ADMIN_PATH.'/admin.head.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.head.php');
 
 // 분류리스트
 $category_select = '';
@@ -280,8 +280,8 @@ if(!sql_query(" select it_skin from {$g5['g5_shop_item_table']} limit 1", false)
                     <input type="hidden" name="it_id" value="<?php echo $it['it_id']; ?>">
                     <span class="frm_ca_id"><?php echo $it['it_id']; ?></span>
                     <a href="<?php echo G5_SHOP_URL; ?>/item.php?it_id=<?php echo $it_id; ?>" class="btn_frmline">상품확인</a>
-                    <a href="<?php echo G5_ADMIN_URL; ?>/shop_admin/itemuselist.php?sfl=a.it_id&amp;stx=<?php echo $it_id; ?>" class="btn_frmline">사용후기</a>
-                    <a href="<?php echo G5_ADMIN_URL; ?>/shop_admin/itemqalist.php?sfl=a.it_id&amp;stx=<?php echo $it_id; ?>" class="btn_frmline">상품문의</a>
+                    <a href="<?php echo G5_ADMIN_SELLER_URL; ?>/shop_admin/itemuselist.php?sfl=a.it_id&amp;stx=<?php echo $it_id; ?>" class="btn_frmline">사용후기</a>
+                    <a href="<?php echo G5_ADMIN_SELLER_URL; ?>/shop_admin/itemqalist.php?sfl=a.it_id&amp;stx=<?php echo $it_id; ?>" class="btn_frmline">상품문의</a>
                 <?php } ?>
             </td>
         </tr>
@@ -496,7 +496,7 @@ if(!sql_query(" select it_skin from {$g5['g5_shop_item_table']} limit 1", false)
             ?>
         </select>
     </div>
-    <div id="sit_compact_fields"><?php include_once(G5_ADMIN_PATH.'/shop_admin/iteminfo.php'); ?></div>
+    <div id="sit_compact_fields"><?php include_once(G5_ADMIN_SELLER_PATH.'/shop_admin/iteminfo.php'); ?></div>
 </section>
 
 
@@ -505,7 +505,7 @@ $(function(){
     $(document).on("change", "#it_info_gubun", function() {
         var gubun = $(this).val();
         $.post(
-            "<?php echo G5_ADMIN_URL; ?>/shop_admin/iteminfo.php",
+            "<?php echo G5_ADMIN_SELLER_URL; ?>/shop_admin/iteminfo.php",
             { it_id: "<?php echo $it['it_id']; ?>", gubun: gubun },
             function(data) {
                 $("#sit_compact_fields").empty().html(data);
@@ -745,7 +745,7 @@ $(function(){
                         <button type="button" id="option_table_create" class="btn_frmline">옵션목록생성</button>
                     </div>
                 </div>
-                <div id="sit_option_frm"><?php include_once(G5_ADMIN_PATH.'/shop_admin/itemoption.php'); ?></div>
+                <div id="sit_option_frm"><?php include_once(G5_ADMIN_SELLER_PATH.'/shop_admin/itemoption.php'); ?></div>
 
                 <script>
                 $(function() {
@@ -795,7 +795,7 @@ $(function(){
                         }
 
                         $.post(
-                            "<?php echo G5_ADMIN_URL; ?>/shop_admin/itemoption.php",
+                            "<?php echo G5_ADMIN_SELLER_URL; ?>/shop_admin/itemoption.php",
                             { it_id: it_id, w: "<?php echo $w; ?>", opt1_subject: opt1_subject, opt2_subject: opt2_subject, opt3_subject: opt3_subject, opt1: opt1, opt2: opt2, opt3: opt3 },
                             function(data) {
                                 $option_table.empty().html(data);
@@ -918,7 +918,7 @@ $(function(){
                         <button type="button" id="supply_table_create">옵션목록생성</button>
                     </div>
                 </div>
-                <div id="sit_option_addfrm"><?php include_once(G5_ADMIN_PATH.'/shop_admin/itemsupply.php'); ?></div>
+                <div id="sit_option_addfrm"><?php include_once(G5_ADMIN_SELLER_PATH.'/shop_admin/itemsupply.php'); ?></div>
 
                 <script>
                 $(function() {
@@ -1001,7 +1001,7 @@ $(function(){
                         }
 
                         $.post(
-                            "<?php echo G5_ADMIN_URL; ?>/shop_admin/itemsupply.php",
+                            "<?php echo G5_ADMIN_SELLER_URL; ?>/shop_admin/itemsupply.php",
                             { it_id: it_id, w: "<?php echo $w; ?>", 'subject[]': subject, 'supply[]': supply },
                             function(data) {
                                 $supply_table.empty().html(data);
@@ -1862,5 +1862,5 @@ categorychange(document.fitemform);
 </script>
 
 <?php
-include_once (G5_ADMIN_PATH.'/admin.tail.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

@@ -14,7 +14,7 @@ if($is_admin != 'super')
 // browscap cache 파일 체크
 if(!is_file(G5_DATA_PATH.'/cache/browscap_cache.php')) {
     echo '<p>Browscap 정보가 없습니다. 아래 링크로 이동해 Browscap 정보를 업데이트 하세요.</p>'.PHP_EOL;
-    echo '<p><a href="'.G5_ADMIN_URL.'/browscap.php">Browscap 업데이트</a></p>'.PHP_EOL;
+    echo '<p><a href="'.G5_ADMIN_SELLER_URL.'/browscap.php">Browscap 업데이트</a></p>'.PHP_EOL;
     exit;
 }
 

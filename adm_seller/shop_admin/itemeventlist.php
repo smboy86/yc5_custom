@@ -11,7 +11,7 @@ $sel_ca_id = get_search_string($sel_ca_id);
 $search = get_search_string($search);
 
 $g5['title'] = '이벤트일괄처리';
-include_once (G5_ADMIN_PATH.'/admin.head.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.head.php');
 
 $where = " where ";
 $sql_search = "";
@@ -214,5 +214,5 @@ function fitemeventlistupdatecheck(f)
 </script>
 
 <?php
-include_once (G5_ADMIN_PATH.'/admin.tail.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

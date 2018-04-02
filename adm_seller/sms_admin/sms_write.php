@@ -6,7 +6,7 @@ auth_check($auth[$sub_menu], "r");
 
 $g5['title'] = "문자 보내기";
 
-include_once(G5_ADMIN_PATH.'/admin.head.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.head.php');
 ?>
 
 <div class="local_ov01 local_ov">
@@ -830,5 +830,5 @@ var sms_obj={
 <?php } ?>
 
 <?php
-include_once(G5_ADMIN_PATH.'/admin.tail.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

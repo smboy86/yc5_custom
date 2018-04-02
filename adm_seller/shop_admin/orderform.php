@@ -8,7 +8,7 @@ $cart_title4 = '배송완료';
 auth_check($auth[$sub_menu], "w");
 
 $g5['title'] = "주문 내역 수정";
-include_once(G5_ADMIN_PATH.'/admin.head.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.head.php');
 
 
 // 완료된 주문에 포인트를 적립한다.
@@ -1131,5 +1131,5 @@ function chk_receipt_price()
 </script>
 
 <?php
-include_once(G5_ADMIN_PATH.'/admin.tail.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

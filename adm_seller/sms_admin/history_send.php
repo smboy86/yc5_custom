@@ -54,7 +54,7 @@ $reply = str_replace('-', '', trim($write['wr_reply']));
 if ($config['cf_sms_use'] != 'icode') {
     alert('기본환경설정에서 icode sms 사용이 비활성화 되어 있습니다.');
 }
-include_once(G5_ADMIN_PATH.'/admin.head.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.head.php');
 
 $SMS = new SMS5;
 
@@ -229,5 +229,5 @@ act.close();
 location.href = 'history_view.php?wr_no=<?php echo $wr_no?>&wr_renum=<?php echo $new_wr_renum?>';
 </script>
 <?php
-include_once(G5_ADMIN_PATH.'/admin.tail.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

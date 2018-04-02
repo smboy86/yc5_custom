@@ -25,7 +25,7 @@ $g5['title'] = "테마설정";
 include_once('./admin.head.php');
 ?>
 
-<script src="<?php echo G5_ADMIN_URL; ?>/theme.js"></script>
+<script src="<?php echo G5_ADMIN_SELLER_URL; ?>/theme.js"></script>
 <div class="local_wr">
     <span class="btn_ov01"><span class="ov_txt">설치된 테마</span><span class="ov_num">  <?php echo number_format($total_count); ?></span></span>
 
@@ -41,7 +41,7 @@ include_once('./admin.head.php');
         if($info['screenshot'])
             $screenshot = '<img src="'.$info['screenshot'].'" alt="'.$name.'">';
         else
-            $screenshot = '<img src="'.G5_ADMIN_URL.'/img/theme_img.jpg" alt="">';
+            $screenshot = '<img src="'.G5_ADMIN_SELLER_URL.'/img/theme_img.jpg" alt="">';
 
         if($config['cf_theme'] == $theme[$i]) {
             $btn_active = '<span class="theme_sl theme_sl_use">사용중</span><button type="button" class="theme_sl theme_deactive" data-theme="'.$theme[$i].'" '.'data-name="'.$name.'">사용안함</button>';

@@ -32,7 +32,7 @@ if(!sql_query(" DESCRIBE {$g5['new_win_table']} ", false)) {
 }
 
 $g5['title'] = '팝업레이어 관리';
-include_once (G5_ADMIN_PATH.'/admin.head.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.head.php');
 
 $sql_common = " from {$g5['new_win_table']} ";
 
@@ -115,5 +115,5 @@ $result = sql_query($sql);
 
 
 <?php
-include_once (G5_ADMIN_PATH.'/admin.tail.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

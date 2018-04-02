@@ -6,7 +6,7 @@ auth_check($auth[$sub_menu], "r");
 
 $g5['title'] = 'FAQ 상세관리';
 if ($fm_subject) $g5['title'] .= ' : '.$fm_subject;
-include_once (G5_ADMIN_PATH.'/admin.head.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.head.php');
 
 $sql = " select * from {$g5['faq_master_table']} where fm_id = '$fm_id' ";
 $fm = sql_fetch($sql);
@@ -88,5 +88,5 @@ $result = sql_query($sql);
 
 
 <?php
-include_once (G5_ADMIN_PATH.'/admin.tail.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

@@ -5,7 +5,7 @@ include_once('./_common.php');
 auth_check($auth[$sub_menu], "r");
 
 $g5['title'] = '분류관리';
-include_once (G5_ADMIN_PATH.'/admin.head.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.head.php');
 
 $where = " where ";
 $sql_search = "";
@@ -283,5 +283,5 @@ $(function() {
 </script>
 
 <?php
-include_once (G5_ADMIN_PATH.'/admin.tail.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

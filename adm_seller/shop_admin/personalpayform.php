@@ -40,7 +40,7 @@ if($popup == 'yes') { // 팝업창일 때
     $wrp_tag_end = '</div>';
 }
 else { // 현재페이지일 때
-    include_once (G5_ADMIN_PATH.'/admin.head.php');
+    include_once (G5_ADMIN_SELLER_PATH.'/admin.head.php');
 }
 $pg_anchor = '<ul class="anchor">
 <li><a href="#anc_spp_info">주문 정보</a></li>
@@ -267,9 +267,9 @@ function form_check(f)
 
 <?php
 if($popup == 'yes') {
-    echo '<script src="'.G5_ADMIN_URL.'/admin.js"></script>'.PHP_EOL;
+    echo '<script src="'.G5_ADMIN_SELLER_URL.'/admin.js"></script>'.PHP_EOL;
     include_once(G5_PATH.'/tail.sub.php');
 } else {
-    include_once (G5_ADMIN_PATH.'/admin.tail.php');
+    include_once (G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 }
 ?>

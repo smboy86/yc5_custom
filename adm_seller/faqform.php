@@ -24,7 +24,7 @@ else
 
 $g5['title'] = $html_title.' 관리';
 
-include_once (G5_ADMIN_PATH.'/admin.head.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.head.php');
 ?>
 
 <form name="frmfaqform" action="./faqformupdate.php" onsubmit="return frmfaqform_check(this);" method="post">
@@ -94,5 +94,5 @@ function frmfaqform_check(f)
 </script>
 
 <?php
-include_once (G5_ADMIN_PATH.'/admin.tail.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

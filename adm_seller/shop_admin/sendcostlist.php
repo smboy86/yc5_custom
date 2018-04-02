@@ -29,7 +29,7 @@ $sql = " select *
 $result = sql_query($sql);
 
 $g5['title'] = '추가배송비관리';
-include_once (G5_ADMIN_PATH.'/admin.head.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.head.php');
 ?>
 
 <section id="scp_list">
@@ -151,5 +151,5 @@ function fsendcost_submit(f)
 </script>
 
 <?php
-include_once(G5_ADMIN_PATH.'/admin.tail.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

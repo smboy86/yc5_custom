@@ -15,7 +15,7 @@ $group = array();
 $qry = sql_query("select * from {$g5['sms5_form_group_table']} order by fg_name");
 while ($res = sql_fetch_array($qry)) array_push($group, $res);
 
-include_once(G5_ADMIN_PATH.'/admin.head.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.head.php');
 ?>
 
 <script>
@@ -173,5 +173,5 @@ function grouplist_submit(f)
 </form>
 
 <?php
-include_once(G5_ADMIN_PATH.'/admin.tail.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

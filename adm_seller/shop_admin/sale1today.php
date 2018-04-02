@@ -9,7 +9,7 @@ $date = preg_replace('/[^0-9]/i', '', $date);
 $date = preg_replace("/([0-9]{4})([0-9]{2})([0-9]{2})/", "\\1-\\2-\\3", $date);
 
 $g5['title'] = "$date 일 매출현황";
-include_once (G5_ADMIN_PATH.'/admin.head.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.head.php');
 
 $sql = " select od_id,
                 mb_id,
@@ -122,5 +122,5 @@ $result = sql_query($sql);
 </div>
 
 <?php
-include_once (G5_ADMIN_PATH.'/admin.tail.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

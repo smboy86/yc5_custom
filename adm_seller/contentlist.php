@@ -31,7 +31,7 @@ if(!sql_query(" DESCRIBE {$g5['content_table']} ", false)) {
 }
 
 $g5['title'] = '내용관리';
-include_once (G5_ADMIN_PATH.'/admin.head.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.head.php');
 
 $sql_common = " from {$g5['content_table']} ";
 
@@ -94,5 +94,5 @@ $result = sql_query($sql);
 <?php echo get_paging(G5_IS_MOBILE ? $config['cf_mobile_pages'] : $config['cf_write_pages'], $page, $total_page, "{$_SERVER['SCRIPT_NAME']}?$qstr&amp;page="); ?>
 
 <?php
-include_once (G5_ADMIN_PATH.'/admin.tail.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

@@ -283,7 +283,7 @@ function icon($act, $link='', $target='_parent')
     global $g5;
 
     $img = array('입력'=>'insert', '추가'=>'insert', '생성'=>'insert', '수정'=>'modify', '삭제'=>'delete', '이동'=>'move', '그룹'=>'move', '보기'=>'view', '미리보기'=>'view', '복사'=>'copy');
-    $icon = '<img src="'.G5_ADMIN_PATH.'/img/icon_'.$img[$act].'.gif" title="'.$act.'">';
+    $icon = '<img src="'.G5_ADMIN_SELLER_PATH.'/img/icon_'.$img[$act].'.gif" title="'.$act.'">';
     if ($link)
         $s = '<a href="'.$link.'">'.$icon.'</a>';
     else
@@ -417,7 +417,7 @@ function admin_referer_check($return=false)
 // 접근 권한 검사
 if (!$member['mb_id'])
 {
-    alert('로그인 하십시오.', G5_BBS_URL.'/login.php?url=' . urlencode(G5_ADMIN_URL));
+    alert('로그인 하십시오.', G5_BBS_URL.'/login.php?url=' . urlencode(G5_ADMIN_SELLER_URL));
 }
 else if ($is_admin != 'super')
 {
@@ -454,14 +454,14 @@ if (get_session('ss_mb_key') !== $admin_key) {
 unset($auth_menu);
 unset($menu);
 unset($amenu);
-$tmp = dir(G5_ADMIN_PATH);
+$tmp = dir(G5_ADMIN_SELLER_PATH);
 $menu_files = array();
 while ($entry = $tmp->read()) {
     if (!preg_match('/^admin.menu([0-9]{3}).*\.php$/', $entry, $m))
         continue;  // 파일명이 menu 으로 시작하지 않으면 무시한다.
 
     $amenu[$m[1]] = $entry;
-    $menu_files[] = G5_ADMIN_PATH.'/'.$entry;
+    $menu_files[] = G5_ADMIN_SELLER_PATH.'/'.$entry;
 }
 @asort($menu_files);
 foreach($menu_files as $file){

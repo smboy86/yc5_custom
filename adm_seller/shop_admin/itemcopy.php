@@ -25,7 +25,7 @@ include_once(G5_PATH.'/head.sub.php');
     </form>
 </div>
 
-<script src="<?php echo G5_ADMIN_URL ?>/admin.js"></script>
+<script src="<?php echo G5_ADMIN_SELLER_URL ?>/admin.js"></script>
 
 <script>
 // <![CDATA[

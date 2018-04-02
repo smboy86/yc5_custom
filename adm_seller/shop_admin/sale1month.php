@@ -11,7 +11,7 @@ $fr_month = preg_replace("/([0-9]{4})([0-9]{2})/", "\\1-\\2", $fr_month);
 $to_month = preg_replace("/([0-9]{4})([0-9]{2})/", "\\1-\\2", $to_month);
 
 $g5['title'] = "$fr_month ~ $to_month 월간 매출현황";
-include_once (G5_ADMIN_PATH.'/admin.head.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.head.php');
 
 function print_line($save)
 {
@@ -150,5 +150,5 @@ $result = sql_query($sql);
 
 
 <?php
-include_once (G5_ADMIN_PATH.'/admin.tail.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

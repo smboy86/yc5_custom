@@ -173,7 +173,7 @@ if(!isset($qaconfig['qa_include_head'])) {
         <tr>
             <th scope="row"><label for="qa_use_sms">SMS 알림</label></th>
             <td>
-                <?php echo help('휴대폰 입력을 사용하실 경우 문의글 등록시 등록자가 답변등록시 SMS 알림 수신을 선택할 수 있도록 합니다.<br>SMS 알림을 사용하기 위해서는 기본환경설정 > <a href="'.G5_ADMIN_URL.'/config_form.php#anc_cf_sms">SMS 설정</a>을 하셔야 합니다.') ?>
+                <?php echo help('휴대폰 입력을 사용하실 경우 문의글 등록시 등록자가 답변등록시 SMS 알림 수신을 선택할 수 있도록 합니다.<br>SMS 알림을 사용하기 위해서는 기본환경설정 > <a href="'.G5_ADMIN_SELLER_URL.'/config_form.php#anc_cf_sms">SMS 설정</a>을 하셔야 합니다.') ?>
                 <select name="qa_use_sms" id="qa_use_sms">
                     <?php echo option_selected(0, $qaconfig['qa_use_sms'], '사용안함'); ?>
                     <?php echo option_selected(1, $qaconfig['qa_use_sms'], '사용함'); ?>

@@ -16,7 +16,7 @@ $info = get_theme_info($theme);
 if($info['screenshot'])
     $screenshot = '<img src="'.$info['screenshot'].'" alt="'.$name.'">';
 else
-    $screenshot = '<img src="'.G5_ADMIN_URL.'/img/theme_img.jpg" alt="">';
+    $screenshot = '<img src="'.G5_ADMIN_SELLER_URL.'/img/theme_img.jpg" alt="">';
 
 $name = get_text($info['theme_name']);
 if($info['theme_uri']) {

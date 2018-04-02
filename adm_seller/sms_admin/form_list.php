@@ -46,7 +46,7 @@ while ($res = sql_fetch_array($qry)) array_push($group, $res);
 $res = sql_fetch("select count(*) as cnt from {$g5['sms5_form_table']} where fg_no=0");
 $no_count = $res['cnt'];
 
-include_once(G5_ADMIN_PATH.'/admin.head.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.head.php');
 ?>
 
 <script>
@@ -235,5 +235,5 @@ function select_copy(sw, f) {
 <?php echo get_paging(G5_IS_MOBILE ? $config['cf_mobile_pages'] : $config['cf_write_pages'], $page, $total_page, $_SERVER['SCRIPT_NAME']."?fg_no=$fg_no&amp;st=$st&amp;sv=$sv&amp;page="); ?>
 
 <?php
-include_once(G5_ADMIN_PATH.'/admin.tail.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

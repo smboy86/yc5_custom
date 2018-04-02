@@ -39,6 +39,7 @@ define('G5_COOKIE_DOMAIN',  '');
 define('G5_DBCONFIG_FILE',  'dbconfig.php');
 
 define('G5_ADMIN_DIR',      'adm');
+define('G5_ADMIN_SELLER_DIR',      'adm_seller');   //180403 smPark adm seller 구분
 define('G5_BBS_DIR',        'bbs');
 define('G5_CSS_DIR',        'css');
 define('G5_DATA_DIR',       'data');
@@ -78,6 +79,7 @@ if (isset($g5_path['path'])) {
 }
 
 define('G5_ADMIN_URL',      G5_URL.'/'.G5_ADMIN_DIR);
+define('G5_ADMIN_SELLER_URL',      G5_URL.'/'.G5_ADMIN_SELLER_DIR);  //180403 smPark adm seller 구분
 define('G5_BBS_URL',        G5_URL.'/'.G5_BBS_DIR);
 define('G5_CSS_URL',        G5_URL.'/'.G5_CSS_DIR);
 define('G5_DATA_URL',       G5_URL.'/'.G5_DATA_DIR);
@@ -95,7 +97,9 @@ define('G5_MOBILE_URL',     G5_URL.'/'.G5_MOBILE_DIR);
 
 // PATH 는 서버상에서의 절대경로
 define('G5_ADMIN_PATH',     G5_PATH.'/'.G5_ADMIN_DIR);
+define('G5_ADMIN_SELLER_PATH',     G5_PATH.'/'.G5_ADMIN_SELLER_DIR);  //180403 smPark adm seller 구분
 define('G5_ADMIN_MENU_PATH',     G5_PATH.'/'.G5_ADMIN_DIR.'/menu'); //180328 smPark admin 메뉴 수정
+define('G5_ADMIN_MENU_SELLER_PATH',     G5_PATH.'/'.G5_ADMIN_DIR); //180403 smPark adm seller 구분
 define('G5_BBS_PATH',       G5_PATH.'/'.G5_BBS_DIR);
 define('G5_DATA_PATH',      G5_PATH.'/'.G5_DATA_DIR);
 define('G5_EXTEND_PATH',    G5_PATH.'/'.G5_EXTEND_DIR);

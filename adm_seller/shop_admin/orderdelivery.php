@@ -21,7 +21,7 @@ include_once(G5_PATH.'/head.sub.php');
         </p>
 
         <p>
-            <a href="<?php echo G5_ADMIN_URL; ?>/shop_admin/orderdeliveryexcel.php">배송정보 일괄등록용 엑셀파일 다운로드</a>
+            <a href="<?php echo G5_ADMIN_SELLER_URL; ?>/shop_admin/orderdeliveryexcel.php">배송정보 일괄등록용 엑셀파일 다운로드</a>
         </p>
     </div>
 

@@ -159,7 +159,7 @@ function check_order_inicis_tmps(){
 
                 if( $tmp['pp_id'] ) continue;
 
-                $mail_msg .= '<a href="'.G5_ADMIN_URL.'/shop_admin/inorderform.php?od_id='.$oid.'" target="_blank" >미완료 발생 주문번호 : '.$oid.'</a><br><br>';
+                $mail_msg .= '<a href="'.G5_ADMIN_SELLER_URL.'/shop_admin/inorderform.php?od_id='.$oid.'" target="_blank" >미완료 발생 주문번호 : '.$oid.'</a><br><br>';
                 
             }
             

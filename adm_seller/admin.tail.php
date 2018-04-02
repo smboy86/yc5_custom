@@ -30,7 +30,7 @@ $(".scroll_top").click(function(){
 
 <!-- <p>실행시간 : <?php echo get_microtime() - $begin_time; ?> -->
 
-<script src="<?php echo G5_ADMIN_URL ?>/admin.js?ver=<?php echo G5_JS_VER; ?>"></script>
+<script src="<?php echo G5_ADMIN_SELLER_URL ?>/admin.js?ver=<?php echo G5_JS_VER; ?>"></script>
 <script src="<?php echo G5_JS_URL ?>/jquery.anchorScroll.js?ver=<?php echo G5_JS_VER; ?>"></script>
 <script>
 $(function(){

@@ -15,7 +15,7 @@ $group = array();
 $qry = sql_query("select * from {$g5['sms5_book_group_table']} where bg_no > 1 order by bg_name");
 while ($res = sql_fetch_array($qry)) array_push($group, $res);
 
-include_once(G5_ADMIN_PATH.'/admin.head.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.head.php');
 ?>
 
 
@@ -185,5 +185,5 @@ function num_group_submit(f)
 
 </form>
 <?php
-include_once(G5_ADMIN_PATH.'/admin.tail.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

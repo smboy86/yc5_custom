@@ -46,7 +46,7 @@ $sql = " select *
 $result = sql_query($sql);
 
 $g5['title'] = '미완료주문';
-include_once (G5_ADMIN_PATH.'/admin.head.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.head.php');
 
 $colspan = 10;
 ?>
@@ -172,5 +172,5 @@ function finorderlist_submit(f)
 </script>
 
 <?php
-include_once (G5_ADMIN_PATH.'/admin.tail.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

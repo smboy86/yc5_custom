@@ -8,7 +8,7 @@ $fr_year = preg_replace('/[^0-9]/i', '', $fr_year);
 $to_year = preg_replace('/[^0-9]/i', '', $to_year);
 
 $g5['title'] = $fr_year.' ~ '.$to_year.' 연간 매출현황';
-include_once (G5_ADMIN_PATH.'/admin.head.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.head.php');
 
 function print_line($save)
 {
@@ -143,5 +143,5 @@ $result = sql_query($sql);
 </div>
 
 <?php
-include_once (G5_ADMIN_PATH.'/admin.tail.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

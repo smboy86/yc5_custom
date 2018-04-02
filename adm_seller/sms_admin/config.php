@@ -20,7 +20,7 @@ if (!$config['cf_icode_id'])
 if (!$sms5['cf_skin'])
     $sms5['cf_skin'] = 'basic';
 
-include_once(G5_ADMIN_PATH.'/admin.head.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.head.php');
 
 ?>
 <?php if (!$config['cf_icode_pw']) { ?>
@@ -118,5 +118,5 @@ if ($config['cf_sms_use'] == 'icode') { // 아이코드 사용
 <?php } ?>
 
 <?php
-include_once(G5_ADMIN_PATH.'/admin.tail.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

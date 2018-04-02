@@ -5,7 +5,7 @@ include_once('./_common.php');
 $max_limit = 7; // 몇행 출력할 것인지?
 
 $g5['title'] = ' 쇼핑몰관리';
-include_once (G5_ADMIN_PATH.'/admin.head.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.head.php');
 
 $pg_anchor = '<ul class="anchor sidx_anchor">
 <li><a href="#anc_sidx_ord">주문현황</a></li>
@@ -538,5 +538,5 @@ function graph_draw()
 </script>
 
 <?php
-include_once (G5_ADMIN_PATH.'/admin.tail.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

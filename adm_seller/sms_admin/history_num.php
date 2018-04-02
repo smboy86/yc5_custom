@@ -24,7 +24,7 @@ $page_start = $page_size * ( $page - 1 );
 
 $vnum = $total_count - (($page-1) * $page_size);
 
-include_once(G5_ADMIN_PATH.'/admin.head.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.head.php');
 ?>
 
 <form name="search_form" method="get" action="<?echo $_SERVER['SCRIPT_NAME']?>" class="local_sch01 local_sch" >
@@ -77,7 +77,7 @@ include_once(G5_ADMIN_PATH.'/admin.head.php');
             $bg_name = '없음';
 
         if ($res['mb_id'])
-            $mb_id = '<a href="'.G5_ADMIN_URL.'/member_form.php?w=u&amp;mb_id='.$res['mb_id'].'">'.$res['mb_id'].'</a>';
+            $mb_id = '<a href="'.G5_ADMIN_SELLER_URL.'/member_form.php?w=u&amp;mb_id='.$res['mb_id'].'">'.$res['mb_id'].'</a>';
         else
             $mb_id = '비회원';
     ?>
@@ -103,5 +103,5 @@ include_once(G5_ADMIN_PATH.'/admin.head.php');
 <?php echo get_paging(G5_IS_MOBILE ? $config['cf_mobile_pages'] : $config['cf_write_pages'], $page, $total_page, $_SERVER['SCRIPT_NAME']."?st=$st&amp;sv=$sv&amp;page="); ?>
 
 <?php
-include_once(G5_ADMIN_PATH.'/admin.tail.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

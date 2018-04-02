@@ -141,8 +141,8 @@ $g5['title'] = get_text($info['theme_name']).' 테마 미리보기';
 require_once(G5_PATH.'/head.sub.php');
 ?>
 
-<link rel="stylesheet" href="<?php echo G5_ADMIN_URL; ?>/css/theme.css">
-<script src="<?php echo G5_ADMIN_URL; ?>/theme.js"></script>
+<link rel="stylesheet" href="<?php echo G5_ADMIN_SELLER_URL; ?>/css/theme.css">
+<script src="<?php echo G5_ADMIN_SELLER_URL; ?>/theme.js"></script>
 
 <section id="preview_item">
     <ul>

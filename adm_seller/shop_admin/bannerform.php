@@ -30,7 +30,7 @@ if(!sql_query(" select bn_device from {$g5['g5_shop_banner_table']} limit 0, 1 "
     sql_query(" update {$g5['g5_shop_banner_table']} set bn_device = 'pc' ", true);
 }
 
-include_once (G5_ADMIN_PATH.'/admin.head.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.head.php');
 ?>
 
 <form name="fbanner" action="./bannerformupdate.php" method="post" enctype="multipart/form-data">
@@ -162,5 +162,5 @@ include_once (G5_ADMIN_PATH.'/admin.head.php');
 </form>
 
 <?php
-include_once (G5_ADMIN_PATH.'/admin.tail.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

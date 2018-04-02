@@ -8,7 +8,7 @@ $g5['title'] = "SMS5 솔루션 설치";
 
 $setup = $_POST['setup'];
 
-include_once(G5_ADMIN_PATH.'/admin.head.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.head.php');
 ?>
 <form name="hidden_form" method="post" action="<?php echo $_SERVER['SCRIPT_NAME']?>">
 <input type="hidden" name="setup">
@@ -82,5 +82,5 @@ flush(); usleep(50000);
 <script>document.getElementById('sms5_btn_next').focus();</script>
 
 <?php
-include_once(G5_ADMIN_PATH.'/admin.tail.php');
+include_once(G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>

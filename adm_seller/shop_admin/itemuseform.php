@@ -31,7 +31,7 @@ $is_confirm_yes  =  $is['is_confirm'] ? 'checked="checked"' : '';
 $is_confirm_no   = !$is['is_confirm'] ? 'checked="checked"' : '';
 
 $g5['title'] = '사용후기';
-include_once (G5_ADMIN_PATH.'/admin.head.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.head.php');
 
 $qstr .= ($qstr ? '&amp;' : '').'sca='.$sca;
 ?>
@@ -115,5 +115,5 @@ function fitemuseform_submit(f)
 </script>
 
 <?php
-include_once (G5_ADMIN_PATH.'/admin.tail.php');
+include_once (G5_ADMIN_SELLER_PATH.'/admin.tail.php');
 ?>
