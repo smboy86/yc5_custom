@@ -78,6 +78,7 @@ var g5_editor    = "<?php echo ($config['cf_editor'] && $board['bo_use_dhtml_edi
 var g5_cookie_domain = "<?php echo G5_COOKIE_DOMAIN ?>";
 <?php if(defined('G5_IS_ADMIN')) { ?>
 var g5_admin_url = "<?php echo G5_ADMIN_URL; ?>";
+var g5_admin_seller_url = "<?php echo G5_ADMIN_SELLER_URL; ?>"; // 180403 smPark adm_seller 분기
 <?php } ?>
 </script>
 <script src="<?php echo G5_JS_URL ?>/jquery-1.8.3.min.js"></script>

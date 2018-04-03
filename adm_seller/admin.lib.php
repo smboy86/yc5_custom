@@ -401,7 +401,7 @@ function admin_referer_check($return=false)
         $msg = '올바른 방법으로 이용해 주십시오.';
     }
 
-    if( $p['path'] && ! preg_match( '/\/'.preg_quote(G5_ADMIN_DIR).'\//i', $p['path'] ) ){
+    if( $p['path'] && ! preg_match( '/\/'.preg_quote(G5_ADMIN_SELLER_DIR).'\//i', $p['path'] ) ){   //180403 smPark adm_seller 분기
         $msg = '올바른 방법으로 이용해 주십시오';
     }
 
