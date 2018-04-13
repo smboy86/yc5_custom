@@ -64,7 +64,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_CSS_URL.'/style.css">', 0
             echo '<span class="sound_only">이 분류에 등록된 다른 상품이 없습니다.</span>';
         }
         ?>
-        <a href="<?php echo G5_SHOP_URL; ?>/largeimage.php?it_id=<?php echo $it['it_id']; ?>" target="_blank" class="popup_item_image "><i class="fa fa-search-plus" aria-hidden="true"></i><span class="sound_only">확대보기</span></a>
+        <a href="<?php echo G5_SHOP_URL; ?>/largeimage.php?it_id=<?php echo $it['it_id']; ?>&amp;no=1" target="_blank" class="popup_item_image "><i class="fa fa-search-plus" aria-hidden="true"></i><span class="sound_only">확대보기</span></a>
     </div>
     <!-- } 다른 상품 보기 끝 -->
 
@@ -354,7 +354,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_CSS_URL.'/style.css">', 0
             <?php if ($it['it_explan']) { // 상품 상세설명 ?>
             <h3>상품 상세설명</h3>
             <div id="sit_inf_explan">
-                <?php echo conv_content($it['it_explan'], 1); ?>
+                <?php echo ($it['it_mobile_explan'] ? conv_content($it['it_mobile_explan'], 1) : conv_content($it['it_explan'], 1)); ?>
             </div>
             <?php } ?>
 
