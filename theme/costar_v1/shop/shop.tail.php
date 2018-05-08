@@ -6,17 +6,10 @@ if (G5_IS_MOBILE) {
     return;
 }
 
-$admin = get_admin("super");
-
-// 사용자 화면 우측과 하단을 담당하는 페이지입니다.
-// 우측, 하단 화면을 꾸미려면 이 파일을 수정합니다.
 ?>
 
-    </div>
-    <!-- } 콘텐츠 끝 -->
-
-<!-- 하단 시작 { -->
-</div>
+    </div> <!-- // container -->
+</div> <!-- // wrapper -->
 
 <div id="ft">
     <div class="ft_wr">
@@ -36,7 +29,6 @@ $admin = get_admin("super");
             <span><b>대표</b> <?php echo $default['de_admin_company_owner']; ?></span>
             <span><b>전화</b> <?php echo $default['de_admin_company_tel']; ?></span>
             <span><b>팩스</b> <?php echo $default['de_admin_company_fax']; ?></span><br>
-            <!-- <span><b>운영자</b> <?php echo $admin['mb_name']; ?></span><br> -->
             <span><b>통신판매업신고번호</b> <?php echo $default['de_admin_tongsin_no']; ?></span>
             <span><b>개인정보 보호책임자</b> <?php echo $default['de_admin_info_name']; ?></span>
 
