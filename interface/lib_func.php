@@ -14,10 +14,22 @@ include_once('../common.php');
 
 <?
 // lib폴더의 파일들을 스캔
+//var_dump(G5_PATH);
+//var_dump(G5_ADMIN_PATH);
+
 $scan = scandir(G5_PATH."/lib");
+$scan_adm = scandir(G5_ADMIN_PATH);
+
 foreach ($scan as $val) {
     if (!strstr($val, ".lib.php")) continue; //파일명이 .lib.php로 끝나지않으면 무시
 	echo "<tr><td class='td_tbl'><p id='p_tbl'><b><a href='?file=$val'>".$val."</a></b></p></td></tr>";
+}
+
+echo "<tr><td class='td_tbl_section'><p id='p_tbl'><b>ADM</b></p></td></tr>";
+
+foreach ($scan_adm as $val) {
+    if (!strstr($val, ".lib.php")) continue;
+	echo "<tr><td class='td_tbl'><p id='p_tbl'><b><a href='?file=$val&cat=adm'>".$val."</a></b></p></td></tr>";
 }
 
 ?>
@@ -31,7 +43,14 @@ foreach ($scan as $val) {
         <th class="th_tbl" width="40%" align="left">함수명</th>
         <th class="th_tbl" width="40%">코멘트</td>
         <?
-        $file = file_get_contents(G5_PATH."/lib/$_GET[file]");
+        // 180508 smPark adm 폴더 추가
+        if(!empty($_GET[cat]) &&  $_GET[cat] == "adm"){
+            $locateFile = G5_ADMIN_PATH."/$_GET[file]";            
+        }else{
+            $locateFile = G5_PATH."/lib/$_GET[file]";
+        }
+
+        $file = file_get_contents($locateFile);
         $scan = explode("\n", $file);
         for ($n = count($scan), $i = 0; $i < $n; $i++) {
             $line = $scan[$i];
