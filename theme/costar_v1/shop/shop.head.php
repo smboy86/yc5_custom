@@ -39,6 +39,7 @@ include_once(G5_LIB_PATH.'/latest.lib.php');
             <li><a href="<?php echo G5_BBS_URL; ?>/logout.php?url=shop">로그아웃</a></li>
             <?php if ($is_admin) {  ?>
             <li class="tnb_admin"><a href="<?php echo G5_ADMIN_URL; ?>/shop_admin/"><b>관리자</b></a></li>
+            <li class="tnb_admin"><a href="/interface/lib_func.php"><b>라이브러리 List</b></a></li> <!-- 180508 smPark 라이브러리 List 버튼 추가 -->
             <?php }  ?>
             <?php } else { ?>
             <li><a href="<?php echo G5_BBS_URL; ?>/register.php">회원가입</a></li>
