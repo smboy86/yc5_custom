@@ -9,7 +9,7 @@ define('G5_THEME_DEVICE', '');
 // 테마에서 커뮤니티 지원여부 설정
 // 커뮤니티 사용없이 쇼핑몰이 초기화면이라면 false로 설정
 // false 설정이면 게시판 head, tail 은 쇼핑몰의 그것이 적용됨
-define('G5_COMMUNITY_USE', false);  // 180506 smPark 테마 사용 안함
+define('G5_COMMUNITY_USE', true);  // 180506 smPark 테마 사용 안함 / 재수정
 
 $theme_config = array();
 
@@ -19,28 +19,28 @@ $theme_config = array();
 
 $theme_config = array(
     'set_default_skin'              => false,   // 기본환경설정의 최근게시물 등의 기본스킨 변경여부 true, false
-    'preview_board_skin'            => 'basic', // 테마 미리보기 때 적용될 기본 게시판 스킨
-    'preview_mobile_board_skin'     => 'basic', // 테마 미리보기 때 적용될 기본 모바일 게시판 스킨
-    'cf_member_skin'                => 'basic', // 회원 스킨
-    'cf_mobile_member_skin'         => 'basic', // 모바일 회원 스킨
-    'cf_new_skin'                   => 'basic', // 최근게시물 스킨
-    'cf_mobile_new_skin'            => 'basic', // 모바일 최근게시물 스킨
-    'cf_search_skin'                => 'basic', // 검색 스킨
-    'cf_mobile_search_skin'         => 'basic', // 모바일 검색 스킨
-    'cf_connect_skin'               => 'basic', // 접속자 스킨
-    'cf_mobile_connect_skin'        => 'basic', // 모바일 접속자 스킨
-    'cf_faq_skin'                   => 'basic', // FAQ 스킨
-    'cf_mobile_faq_skin'            => 'basic', // 모바일 FAQ 스킨
+    'preview_board_skin'            => 'costar_basic', // 테마 미리보기 때 적용될 기본 게시판 스킨
+    'preview_mobile_board_skin'     => 'costar_basic', // 테마 미리보기 때 적용될 기본 모바일 게시판 스킨
+    'cf_member_skin'                => 'costar_basic', // 회원 스킨
+    'cf_mobile_member_skin'         => 'costar_basic', // 모바일 회원 스킨
+    'cf_new_skin'                   => 'costar_basic', // 최근게시물 스킨
+    'cf_mobile_new_skin'            => 'costar_basic', // 모바일 최근게시물 스킨
+    'cf_search_skin'                => 'costar_basic', // 검색 스킨
+    'cf_mobile_search_skin'         => 'costar_basic', // 모바일 검색 스킨
+    'cf_connect_skin'               => 'costar_basic', // 접속자 스킨
+    'cf_mobile_connect_skin'        => 'costar_basic', // 모바일 접속자 스킨
+    'cf_faq_skin'                   => 'costar_basic', // FAQ 스킨
+    'cf_mobile_faq_skin'            => 'costar_basic', // 모바일 FAQ 스킨
     'bo_gallery_cols'               => 4,       // 갤러리 이미지 수
     'bo_gallery_width'              => 210,     // 갤러리 이미지 폭
     'bo_gallery_height'             => 150,     // 갤러리 이미지 높이
     'bo_mobile_gallery_width'       => 250,     // 모바일 갤러리 이미지 폭
     'bo_mobile_gallery_height'      => 200,     // 모바일 갤러리 이미지 높이
     'bo_image_width'                => 900,     // 게시판 뷰 이미지 폭
-    'qa_skin'                       => 'basic', // 1:1문의 스킨
-    'qa_mobile_skin'                => 'basic', // 1:1문의 모바일 스킨
-    'de_shop_skin'                  => 'basic', // 쇼핑몰 PC 기본스킨
-    'de_shop_mobile_skin'           => 'basic', // 쇼핑몰 모바일 기본스킨
+    'qa_skin'                       => 'costar_basic', // 1:1문의 스킨
+    'qa_mobile_skin'                => 'costar_basic', // 1:1문의 모바일 스킨
+    'de_shop_skin'                  => 'costar_basic', // 쇼핑몰 PC 기본스킨
+    'de_shop_mobile_skin'           => 'costar_basic', // 쇼핑몰 모바일 기본스킨
     'de_type1_list_use'             => 1,       // PC 히트상품 출력
     'de_type1_list_skin'            => 'main.10.skin.php', // PC 히트상품 출력스킨
     'de_type1_list_mod'             => 4,       // PC 히트상품 출력 1줄당 이미지 수
