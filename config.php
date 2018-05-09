@@ -162,7 +162,7 @@ define('G5_MOBILE_AGENT',   'phone|samsung|lgtel|mobile|[^A]skt|nokia|blackberry
 
 // SMTP
 // lib/mailer.lib.php 에서 사용
-define('G5_SMTP',      'smtp.naver.com'); // 180325 smPark 수정  
+define('G5_SMTP',      'smtp.naver.com'); // 180325 smPark-dev 수정  
 define('G5_SMTP_PORT', '587');
 
 
@@ -176,7 +176,7 @@ define('G5_STRING_ENCRYPT_FUNCTION', 'sql_password');
 
 // SQL 에러를 표시할 것인지 지정
 // 에러를 표시하려면 TRUE 로 변경
-define('G5_DISPLAY_SQL_ERROR', FALSE);
+define('G5_DISPLAY_SQL_ERROR', TRUE);  // 180509 smPark-dev
 
 // escape string 처리 함수 지정
 // addslashes 로 변경 가능
