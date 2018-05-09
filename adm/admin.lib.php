@@ -436,7 +436,7 @@ else if ($is_admin != 'super')
 }
 
 // 관리자의 아이피, 브라우저와 다르다면 세션을 끊고 관리자에게 메일을 보낸다.
-$admin_key = md5($member['mb_datetime'] . $_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
+$admin_key = md5($member['mb_datetime'] . get_real_client_ip() . $_SERVER['HTTP_USER_AGENT']);
 if (get_session('ss_mb_key') !== $admin_key) {
 
     session_destroy();
@@ -454,16 +454,14 @@ if (get_session('ss_mb_key') !== $admin_key) {
 unset($auth_menu);
 unset($menu);
 unset($amenu);
-// 180328 smPark admin 메뉴 경로 수정
-$tmp = dir(G5_ADMIN_MENU_PATH);
-
+$tmp = dir(G5_ADMIN_PATH);
 $menu_files = array();
-while ($entry = $tmp->read()) {    
+while ($entry = $tmp->read()) {
     if (!preg_match('/^admin.menu([0-9]{3}).*\.php$/', $entry, $m))
         continue;  // 파일명이 menu 으로 시작하지 않으면 무시한다.
 
     $amenu[$m[1]] = $entry;
-    $menu_files[] = G5_ADMIN_MENU_PATH.'/'.$entry;
+    $menu_files[] = G5_ADMIN_PATH.'/'.$entry;
 }
 @asort($menu_files);
 foreach($menu_files as $file){
