@@ -76,7 +76,8 @@ if (!isset($board['bo_mobile_subject'])) {
     sql_query(" ALTER TABLE `{$g5['board_table']}` ADD `bo_mobile_subject` VARCHAR(255) NOT NULL DEFAULT '' AFTER `bo_subject` ", false);
 }
 
-if (!isset($board['bo_use_captcha'])) {
+// 180509 smPark config.php::define('G5_DISPLAY_SQL_ERROR', TRUE); 로 인한 오류
+if (!empty($board) && !isset($board['bo_use_captcha'])) { // 180509 smPark 그누보드 오류 임시 수정
     sql_query(" ALTER TABLE `{$g5['board_table']}` ADD `bo_use_captcha` TINYINT NOT NULL DEFAULT '0' AFTER `bo_use_sns` ");
 }
 
